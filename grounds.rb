@@ -5,13 +5,13 @@
 class Grounds < Formula
   desc "Grounds Internal Developer Platform CLI"
   homepage "https://grounds.gg"
-  version "0.1.1"
+  version "0.1.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.1/grounds-cli_0.1.1_darwin_amd64.tar.gz"
-      sha256 "62101edac1fcc4eb50886dad9b823d5d42270cd9de08823edcddc4dadda551f5"
+      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.2/grounds-cli_0.1.2_darwin_amd64.tar.gz"
+      sha256 "e280464b4bd772beaa8aadde8c99434ba16274306796c8412fd47fd45c8a5881"
 
       define_method(:install) do
         bin.install "grounds"
@@ -19,8 +19,8 @@ class Grounds < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.1/grounds-cli_0.1.1_darwin_arm64.tar.gz"
-      sha256 "f9151efc6e04451419f177fc7d0d2e2f5c1391d29b9e40bd32bab5dd932dd7ba"
+      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.2/grounds-cli_0.1.2_darwin_arm64.tar.gz"
+      sha256 "6a3d9096ad184c877a77bf6412fe9ed41d84c88bf9e20f678253dcb7cdd19ded"
 
       define_method(:install) do
         bin.install "grounds"
@@ -31,16 +31,16 @@ class Grounds < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.1/grounds-cli_0.1.1_linux_amd64.tar.gz"
-      sha256 "3de423d340554bf8aa4500c109ed7164c0d8c4518b6eed06c1998e69d91b907a"
+      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.2/grounds-cli_0.1.2_linux_amd64.tar.gz"
+      sha256 "d6914ed4c0735ff7a701b2cc788f3c5a53988a3f3bef807d343208cd51118afb"
       define_method(:install) do
         bin.install "grounds"
         generate_completions_from_executable(bin/"grounds", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.1/grounds-cli_0.1.1_linux_arm64.tar.gz"
-      sha256 "b0e4559ae71f85d8e8940167097d1eb37ae16d87075a05b02c418867169a7651"
+      url "https://github.com/groundsgg/grounds-cli/releases/download/v0.1.2/grounds-cli_0.1.2_linux_arm64.tar.gz"
+      sha256 "e56b4cf926e665e7ce502a836ca39898414b97925ba011961dd130e3fa4f6b63"
       define_method(:install) do
         bin.install "grounds"
         generate_completions_from_executable(bin/"grounds", "completion")
