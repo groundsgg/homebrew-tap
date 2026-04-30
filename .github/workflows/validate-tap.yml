@@ -1,0 +1,17 @@
+name: Validate Tap
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run tap consistency validation
+        run: ./scripts/validate_tap.sh
